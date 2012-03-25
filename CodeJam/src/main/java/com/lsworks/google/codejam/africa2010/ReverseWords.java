@@ -9,9 +9,9 @@ import com.google.common.io.Files;
 
 public class ReverseWords {
 	public static void main(String[] args) throws IOException {
-//		File inputFile = new File("src/main/resources/reversewords-sample.txt");
-		 File inputFile = new File("src/main/resources/B-large-practice.in");
-//		 File inputFile = new File("src/main/resources/B-small-practice.in");
+//		File inputFile = new File("src/main/resources/africa2010/reversewords-sample.txt");
+		 File inputFile = new File("src/main/resources/africa2010/B-large-practice.in");
+//		 File inputFile = new File("src/main/resources/africa2010/B-small-practice.in");
 		List<String> inputs = Files.readLines(inputFile, Charsets.UTF_8);
 
 		for (int test = 1; test <= Integer.parseInt(inputs.get(0)); test++) {

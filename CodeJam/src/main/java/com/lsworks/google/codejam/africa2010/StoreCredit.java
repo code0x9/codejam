@@ -10,9 +10,9 @@ import com.google.common.io.Files;
 
 public class StoreCredit {
 	public static void main(String[] args) throws IOException {
-		// File inputFile = new File("src/main/resources/sample.txt");
-		File inputFile = new File("src/main/resources/A-large-practice.in");
-		// File inputFile = new File("src/main/resources/A-small-practice.in");
+		// File inputFile = new File("src/main/resources/africa2010/sample.txt");
+		File inputFile = new File("src/main/resources/africa2010/A-large-practice.in");
+		// File inputFile = new File("src/main/resources/africa2010/A-small-practice.in");
 		List<String> inputs = Files.readLines(inputFile, Charsets.UTF_8);
 
 		for (int test = 1; test <= Integer.parseInt(inputs.get(0)); test++) {

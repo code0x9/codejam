@@ -9,9 +9,9 @@ import com.google.common.io.Files;
 
 public class T9Spelling {
 	public static void main(String[] args) throws IOException {
-//		File inputFile = new File("src/main/resources/spelling-sample.txt");
-		 File inputFile = new File("src/main/resources/C-large-practice.in");
-//		 File inputFile = new File("src/main/resources/C-small-practice.in");
+//		File inputFile = new File("src/main/resources/africa2010/spelling-sample.txt");
+		 File inputFile = new File("src/main/resources/africa2010/C-large-practice.in");
+//		 File inputFile = new File("src/main/resources/africa2010/C-small-practice.in");
 		List<String> inputs = Files.readLines(inputFile, Charsets.UTF_8);
 		// inputs = Lists.newArrayList("1", "abb");
 		for (int test = 1; test <= Integer.parseInt(inputs.get(0)); test++) {
