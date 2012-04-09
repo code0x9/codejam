@@ -2,13 +2,9 @@ package com.lsworks.google.codejam.round1a2010;
 
 import java.io.File;
 import java.io.IOException;
-import java.math.BigInteger;
-import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
 
 import com.google.common.base.Charsets;
-import com.google.common.collect.Lists;
 import com.google.common.io.Files;
 
 public class JoinK {
@@ -19,12 +15,12 @@ public class JoinK {
 	}
 
 	private void calc() throws IOException {
+		// File inputFile = new File(
+		// "src/main/resources/round1a2010/joink-sample.txt");
 //		File inputFile = new File(
-//				"src/main/resources/round1a2010/joink-sample.txt");
-		 File inputFile = new File(
-		 "src/main/resources/round1a2010/A-small-practice.in");
-		// File inputFile = new
-		// File("src/main/resources/round1a2008/A-large-practice.in");
+//				"src/main/resources/round1a2010/A-small-practice.in");
+		 File inputFile = new
+		 File("src/main/resources/round1a2010/A-large-practice.in");
 		List<String> inputs = Files.readLines(inputFile, Charsets.UTF_8);
 		int totalTest = Integer.parseInt(inputs.remove(0));
 
@@ -42,7 +38,9 @@ public class JoinK {
 			}
 
 			char[][] rotatedBoard = rotate(board);
+			// printBoard(rotatedBoard);
 			String result = judge(rotatedBoard, condition);
+			// System.out.format("Case #%d: %d, %s\n", test, condition, result);
 			System.out.format("Case #%d: %s\n", test, result);
 		}
 	}
@@ -89,10 +87,10 @@ public class JoinK {
 
 		if (red && blue) {
 			return "Both";
-		} else if (red) {
-			return "Red";
 		} else if (blue) {
 			return "Blue";
+		} else if (red) {
+			return "Red";
 		} else {
 			return "Neither";
 		}
@@ -144,7 +142,7 @@ public class JoinK {
 
 		// diag /
 		for (int row = 0; row < board.length - condition + 1; row++) {
-			for (int col = board.length - 1; col >= condition; col--) {
+			for (int col = board.length - 1; col >= condition - 1; col--) {
 				hitCount = 0;
 				for (int check = 0; check < condition; check++) {
 					if (board[row + check][col - check] == color) {
