@@ -17,10 +17,10 @@ public class JoinK {
 	private void calc() throws IOException {
 		// File inputFile = new File(
 		// "src/main/resources/round1a2010/joink-sample.txt");
-//		File inputFile = new File(
-//				"src/main/resources/round1a2010/A-small-practice.in");
-		 File inputFile = new
-		 File("src/main/resources/round1a2010/A-large-practice.in");
+		// File inputFile = new File(
+		// "src/main/resources/round1a2010/A-small-practice.in");
+		File inputFile = new File(
+				"src/main/resources/round1a2010/A-large-practice.in");
 		List<String> inputs = Files.readLines(inputFile, Charsets.UTF_8);
 		int totalTest = Integer.parseInt(inputs.remove(0));
 
@@ -38,19 +38,8 @@ public class JoinK {
 			}
 
 			char[][] rotatedBoard = rotate(board);
-			// printBoard(rotatedBoard);
 			String result = judge(rotatedBoard, condition);
-			// System.out.format("Case #%d: %d, %s\n", test, condition, result);
 			System.out.format("Case #%d: %s\n", test, result);
-		}
-	}
-
-	private void printBoard(char[][] board) {
-		for (int row = 0; row < board.length; row++) {
-			for (int col = 0; col < board.length; col++) {
-				System.out.print(board[row][col]);
-			}
-			System.out.println();
 		}
 	}
 
